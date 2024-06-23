@@ -17,7 +17,7 @@ const tabs = [
     icon: <BillOutline />,
   },
   {
-    key: '/new',
+    key: '/new ',
     title: '记账',
     icon: <AddCircleOutline />,
   },
@@ -37,7 +37,7 @@ const Layout = () => {
   // 切换菜单跳转路由
   const navigate = useNavigate()
   const swithRoute = (path) => {
-    console.log(path)
+    console.log("点击了路由----》",path)
     navigate(path)
   }
   return (

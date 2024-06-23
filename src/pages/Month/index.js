@@ -14,7 +14,7 @@ const Month = () => {
     // return出去计算之后的值
     return _.groupBy(billList, (item) => dayjs(item.date).format('YYYY-MM'))
   }, [billList])
-  console.log(monthGroup)
+  console.log("组合:",monthGroup)
 
   // 控制弹框的打开和关闭
   const [dateVisible, setDateVisible] = useState(false)
@@ -53,7 +53,7 @@ const Month = () => {
     // 其他逻辑
     console.log(date)
     const formatDate = dayjs(date).format('YYYY-MM')
-    console.log(formatDate)
+    console.log("转换日期：",formatDate)
     setMonthList(monthGroup[formatDate])
     setCurrentDate(formatDate)
   }
